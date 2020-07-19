@@ -19,10 +19,21 @@
 
     <form action="${pageContext.request.contextPath}/book/updateBook" method="post">
         <input type="hidden" name="bookId" value="${Qbook.bookId}">
-        书籍名称：<input type="text" name="bookName" value="${Qbook.bookName}"><br><br><br>
-        书籍数量：<input type="text" name="counts" value="${Qbook.counts}"><br><br><br>
-        书籍详情：<input type="text" name="detail" value="${Qbook.detail}"><br><br><br>
-        <input type="submit" value="修改">
+        <div class="form-group">
+            <label >书籍名称：</label>
+            <input type="text" class="form-control" name="bookName" value="${Qbook.bookName}" required>
+        </div>
+        <div class="form-group">
+            <label >书籍数量：</label>
+            <input type="text" class="form-control" name="counts" value="${Qbook.counts}" required>
+        </div>
+        <div class="form-group">
+            <label >书籍详情：</label>
+            <input type="text" class="form-control" name="detail" value="${Qbook.detail}" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="form-control" value="修改">
+        </div>
     </form>
 
 </div>

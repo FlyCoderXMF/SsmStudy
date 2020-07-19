@@ -1,6 +1,7 @@
 package com.xmf.dao;
 
 import com.xmf.pojo.Books;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,4 +18,6 @@ public interface BookMapper {
     Books queryBookById(int bookId);
 
     List<Books> queryAllBook();
+
+    Books queryBookByName(@Param("bookName") String bookName);
 }

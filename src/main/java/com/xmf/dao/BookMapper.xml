@@ -21,6 +21,10 @@
         where bookId=#{bookId};
     </select>
     <select id="queryAllBook" resultType="Books">
+        select * from ssmbuild.books;
+    </select>
+    <select id="queryBookByName" parameterType="String" resultType="Books">
         select * from ssmbuild.books
+        where bookName=#{bookName};
     </select>
 </mapper>

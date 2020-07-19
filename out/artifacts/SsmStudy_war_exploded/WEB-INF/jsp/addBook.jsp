@@ -18,10 +18,21 @@
     </div>
 
     <form action="${pageContext.request.contextPath}/book/addBook" method="post">
-        书籍名称：<input type="text" name="bookName" required><br><br><br>
-        书籍数量：<input type="text" name="counts" required><br><br><br>
-        书籍详情：<input type="text" name="detail" required><br><br><br>
-        <input type="submit" value="添加">
+        <div class="form-group">
+            <label >书籍名称：</label>
+            <input type="text" class="form-control" name="bookName" required>
+        </div>
+        <div class="form-group">
+            <label >书籍数量：</label>
+            <input type="text" class="form-control" name="counts" required>
+        </div>
+        <div class="form-group">
+            <label >书籍详情：</label>
+            <input type="text" class="form-control" name="detail" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="form-control" value="添加">
+        </div>
     </form>
 
 </div>
